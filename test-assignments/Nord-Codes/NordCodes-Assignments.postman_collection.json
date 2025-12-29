@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "7a63c41a-4850-4eb6-8901-d7c83c80ab58",
+		"name": "NordCodes-Assignments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44179332",
+		"_collection_link": "https://ralinka0017.postman.co/workspace/ralinka0017's-Workspace~dbe8e950-f757-454b-8786-8cf86327c43f/collection/44179332-7a63c41a-4850-4eb6-8901-d7c83c80ab58?action=share&source=collection_link&creator=44179332"
+	},
+	"item": [
+		{
+			"name": "✅ POSITIVE TEST",
+			"item": [
+				{
+					"name": "Authorization",
+					"item": [
+						{
+							"name": "200: OK Authorization",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const response = pm.response.json();\r",
+											"pm.collectionVariables.set(\"auth_token\", response.token);\r",
+											"pm.collectionVariables.set(\"initial_balance\", response.balance);\r",
+											"console.log(\"Auth token\", response.token.substring(0, 10) + \"...\");"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "username=admin&password=qazWSXedc",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apitests.nyc.wf/authorization",
+									"protocol": "https",
+									"host": [
+										"apitests",
+										"nyc",
+										"wf"
+									],
+									"path": [
+										"authorization"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transactions",
+					"item": []
+				},
+				{
+					"name": "Logout",
+					"item": []
+				}
+			]
+		},
+		{
+			"name": "❌ NEGATIVE TESTS",
+			"item": [
+				{
+					"name": "Authorization",
+					"item": []
+				},
+				{
+					"name": "Transactions",
+					"item": []
+				},
+				{
+					"name": "Logout",
+					"item": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "auth_token",
+			"value": ""
+		},
+		{
+			"key": "initial_balance",
+			"value": ""
+		},
+		{
+			"key": "withdraw_amount",
+			"value": ""
+		}
+	]
+}
