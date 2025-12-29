@@ -5,7 +5,7 @@ This repository is for course assignments, test assignments, and showing the qa 
 
 ## Тестовые задания
 
-[Ссылка на файлы с тестовым] (https://github.com/ralinka17/resume-qa/tree/main/test-assignments/Nord-Codes)
+[Ссылка на файлы с тестовым](https://github.com/ralinka17/resume-qa/tree/main/test-assignments/Nord-Codes)
 - Написание API тестовой документации и пример баг-репорта
 - Создание коллекции с автоматизацией тестирования API Postman с использованием JS
 
